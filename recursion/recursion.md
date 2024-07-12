@@ -8,13 +8,14 @@ It's useful for sorting and searching algorithms, and for solving problems that 
 ## How does recursion work?
 
 If we have a function for factorial, it might look like this:
-
-```python
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
+```cpp
+int factorial(int n) 
+{
+    if (n == 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
 ```
 
 When we call `factorial(3)`, the function will call itself with `n=2`, then `n=1`, then `n=0`. When `n=0`, the function will return 1, and then the function will return 1 * 1 = 1, then 2 * 1 = 2, then 3 * 2 = 6.
